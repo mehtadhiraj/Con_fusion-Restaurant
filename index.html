@@ -34,10 +34,46 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
             </div>            
         </div>
     </nav>
-
+    <div class="modal fade" role="dialog" id="loginModal">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="username" class="col-md-2 col-form-label">Username</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="password" class="col-md-2 col-form-label">Password</label>
+                            <div class="col-md-10">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-2"></div>
+                            <div class="offset-md-2 col-md-10">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -49,7 +85,8 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a href="#reserveDetails"class="btn btn-warning btn-lg btn-block">Reserve Table</a>
+                    <a href="#reserveDetails"class="btn btn-warning btn-lg btn-block" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+91-9819166628</strong>" data-placement="bottom">Reserve Table</a>
+                    
                 </div>
                 </div>
             </div>
@@ -210,5 +247,10 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 
 </html>
