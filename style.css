@@ -39,3 +39,12 @@ address{
     margin:0px;
     color:#0f0f0f;
 }
+
+.tab-content{
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-top: 0px;
+}
+strong{
+    color: grey;
+}
