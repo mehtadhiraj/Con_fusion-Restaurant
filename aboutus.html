@@ -24,7 +24,7 @@
 <body>
 	<nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
         <div class="container">
-        	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -38,18 +38,118 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
             </div>            
         </div>
     </nav>
-
-    <header class="jumbotron ends">
+    <div class="modal fade" role="dialog" id="loginModal">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="username" class="col-md-2 col-form-label">Username</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="password" class="col-md-2 col-form-label">Password</label>
+                            <div class="col-md-10">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-2"></div>
+                            <div class="offset-md-2 col-md-10">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" id="reserveTableModal">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve Table</h4>
+                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <dl class="row">
+                        <dd class="col-2">Number of Guests</dd>
+                        <dd class="col-10"> 
+                            <input type="radio" name="options" id="option1"> 1 
+                            <input type="radio" name="options" id="option2"> 2 
+                            <input type="radio" name="options" id="option3"> 3 
+                            <input type="radio" name="options" id="option4"> 4 
+                            <input type="radio" name="options" id="option5"> 5 
+                            <input type="radio" name="options" id="option6"> 6 
+                         </dd>
+                        <dt class="col-2"></dt>
+                        <dd class="col-10"></dd>
+                        <dd class="col-2">Section</dd>
+                        <dd class="col-10">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                    <input type="radio" name="smokingOption" id="notsmoking" autocomplete="off" checked> Not-Smoking
+                                </label>
+                                <label class="btn btn-danger">
+                                    <input type="radio" name="smokingOption" id="smoking" autocomplete="off"> Smoking
+                                </label>
+                            </div>
+                        </dd>
+                        <dt class="col-2"></dt>
+                        <dd class="col-10"></dd>
+                        <dd class="col-2">Date and Time</dd>
+                        <dd class="col-10">
+                            <div class="row">
+                                <div class="col-5">
+                                    <input type="text" name="date" placeholder="Date" class="form-control">
+                                </div>
+                                <div class="col-5">
+                                    <input type="text" name="time" placeholder="Time" class="form-control">
+                                </div>
+                            </div>
+                        </dd>
+                        <dt class="col-2"></dt>
+                        <dd class="col-10"></dd>
+                        <dt class="col-2"></dt>
+                        <dd class="col-10"></dd>
+                        <dt class="col-2"></dt>
+                        <dd class="col-10">
+                            <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary">Reserve</button>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
                 <div class="col-12 col-sm-6">
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm">
+                <div class="col-12 col-sm align-self-center">
+                    <img src="img/logo.png" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm align-self-center">
+                    <!-- <a href="#reserveDetails"class="btn btn-warning btn-lg btn-block" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+91-9819166628</strong>" data-placement="bottom">Reserve Table</a> -->
+                    <a class="btn btn-warning btn-lg btn-block" data-toggle="modal" data-target="#reserveTableModal">Reserve Table</a>
+                </div>
                 </div>
             </div>
         </div>
