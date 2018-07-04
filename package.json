@@ -1,17 +1,34 @@
 {
   "name": "package",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass -o ./ css/"
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap-social": "^5.1.1",
     "font-awesome": "^4.7.0",
-    "node-sass": "^4.9.0"
-  }
+    "lite-server": "^2.4.0",
+    "liteserver": "^0.3.0",
+    "node-sass": "^4.9.0",
+    "onchange": "^4.0.0",
+    "parallelshell": "^3.0.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehtadhiraj/Con_fusion-Restaurant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mehtadhiraj/Con_fusion-Restaurant/issues"
+  },
+  "homepage": "https://github.com/mehtadhiraj/Con_fusion-Restaurant#readme",
+  "description": ""
 }

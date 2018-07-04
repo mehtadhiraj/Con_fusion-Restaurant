@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap-social/5.1.1/bootstrap-social.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
@@ -35,7 +35,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="login">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -144,7 +144,7 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <!-- <a href="#reserveDetails"class="btn btn-warning btn-lg btn-block" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+91-9819166628</strong>" data-placement="bottom">Reserve Table</a> -->
-                    <a class="btn btn-warning btn-lg btn-block" data-toggle="modal" data-target="#reserveTableModal">Reserve Table</a>
+                    <a class="btn btn-warning btn-lg btn-block" id="reserveTable">Reserve Table</a>
                 </div>
                 </div>
             </div>
@@ -351,34 +351,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
-    <!-- <script type="text/javascript">
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script> --> 
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('#mycarousel').carousel({interval:1000});
-            // $('#carousel-button').click(function(){
-            //     if ($('#carousel-button').children('span').hasClass('fa-pause')) {
-            //         $("#mycarousel").carousel('pause');
-            //         $("#carousel-button").children('span').removeClass('fa-pause');
-            //         $("#carousel-button").children('span').addClass('fa-play');    
-            //     } else {
-            //         $("#mycarousel").carousel('cycle');
-            //         $("#carousel-button").children('span').removeClass('fa-play');
-            //         $("#carousel-button").children('span').addClass('fa-pause');
-            //     }
-                
-
-            // });
-            $('#mycarousel').hover(function(){
-                $("#mycarousel").carousel("pause");
-            });
-            $('#mycarousel').mouseleave(function(){
-                $("#mycarousel").carousel("cycle");
-            });
-        });
-    </script>
+     <!-- link to js file created by me -->
+    <script type="text/javascript" src="js/script.js"></script>
 
 </html>
