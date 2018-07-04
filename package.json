@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -o ./ css/"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap-social": "^5.1.1",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "node-sass": "^4.9.0"
   }
 }
